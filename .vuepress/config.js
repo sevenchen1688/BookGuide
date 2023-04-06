@@ -1,7 +1,14 @@
 module.exports = {
   "title": "程序员读书指南",
   "description": "程序员读书指南",
-  "dest": "public",
+  locales: {
+    '/': {
+      lang: 'zh-CN',
+    }
+  },
+  base: '/',
+  port: 8092,
+  dest: 'dist',
   "head": [
     [
       "link",
@@ -22,69 +29,67 @@ module.exports = {
   "themeConfig": {
     "nav": [
       {
-        "text": "Home",
+        "text": "首页",
         "link": "/",
         "icon": "reco-home"
       },
       {
-        "text": "TimeLine",
+        "text": "书库",
+        "icon": "reco-blog",
+        "link": "/docs/books/2023/2023读书清单.md"
+      },
+      {
+        "text": "时间轴",
         "link": "/timeline/",
         "icon": "reco-date"
       },
       {
-        "text": "Docs",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "vuepress-reco",
-            "link": "/docs/theme-reco/"
-          }
-        ]
-      },
-      {
         "text": "Contact",
-        "icon": "reco-message",
         "items": [
           {
             "text": "GitHub",
-            "link": "https://github.com/recoluan",
+            "link": "https://github.com/sevenchen1688",
             "icon": "reco-github"
           }
         ]
       }
     ],
     "sidebar": {
-      "/docs/theme-reco/": [
-        "",
-        "theme",
-        "plugin",
-        "api"
+      '/docs/books/': [
+        {
+          title: "2023",
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/docs/books/2023/2023读书清单.md',
+          ]
+        },
       ]
     },
     "type": "blog",
     "blogConfig": {
       "category": {
-        "location": 2,
-        "text": "Category"
+        "location": 3,
+        "text": "分类"
       },
       "tag": {
-        "location": 3,
-        "text": "Tag"
+        "location": 4,
+        "text": "标签"
       }
     },
     "friendLink": [
       {
-        "title": "午后南杂",
-        "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
+        "title": "代码实验室",
+        // "desc": "Enjoy when you can, and endure when you must.",
+        // "email": "1156743527@qq.com",
+        "link": "https://codelab7.cn"
       },
-      {
-        "title": "vuepress-theme-reco",
-        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-theme-reco.recoluan.com"
-      }
+      // {
+      //   "title": "Seven的读书博客",
+      //   "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+      //   "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+      //   "link": "https://vuepress-theme-reco.recoluan.com"
+      // }
     ],
     "logo": "/logo.png",
     "search": true,
@@ -93,7 +98,8 @@ module.exports = {
     "author": "Seven",
     "authorAvatar": "/avatar.png",
     "record": "xxxx",
-    "startYear": "2017"
+    "startYear": "2023",
+    noFoundPageByTencent: false
   },
   "markdown": {
     "lineNumbers": true
