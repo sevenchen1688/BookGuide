@@ -36,7 +36,7 @@ module.exports = {
       {
         "text": "书库",
         "icon": "reco-blog",
-        "link": "/docs/books/2023/2023读书清单.md"
+        "link": "/docs/books/2023/2023读书计划.md"
       },
       {
         "text": "时间轴",
@@ -54,18 +54,20 @@ module.exports = {
         ]
       }
     ],
-    "sidebar": {
+    sidebar: {
       '/docs/books/': [
         {
           title: "2023",
           collapsable: false,
           sidebarDepth: 0,
           children: [
-            '/docs/books/2023/2023读书清单.md',
+            '/docs/books/2023/2023读书计划.md',
           ]
         },
       ]
     },
+    subSidebar: 'auto',
+    sidebarDepth: 0,
     "type": "blog",
     "blogConfig": {
       "category": {
@@ -97,8 +99,16 @@ module.exports = {
     "lastUpdated": "Last Updated",
     "author": "Seven",
     "authorAvatar": "/avatar.png",
-    "record": "xxxx",
-    "startYear": "2023",
+    // 搜索设置
+    search: true,
+    searchMaxSuggestions: 20,
+    // 备案
+    record: '粤ICP备2023020946号-1',
+    recordLink: 'https://beian.miit.gov.cn/',
+    cyberSecurityRecord: '粤公网安备 44011102003343号',
+    cyberSecurityLink: 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011102003343',
+    // 项目开始时间，只填写年份
+    startYear: '2023',
     noFoundPageByTencent: false
   },
   "markdown": {
