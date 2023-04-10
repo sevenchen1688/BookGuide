@@ -1,6 +1,6 @@
 module.exports = {
-  "title": "程序员读书指南",
-  "description": "程序员读书指南",
+  "title": "读书会锁",
+  "description": "读书会锁",
   locales: {
     '/': {
       lang: 'zh-CN',
